@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net8.0": {
       "AssetManagementBase/0.6.7": {
         "type": "package",
         "compile": {
@@ -79,13 +79,6 @@
           "lib/netstandard2.0/info.lundin.math.dll": {}
         }
       },
-      "MonoGame.Content.Builder.Task/3.8.1.303": {
-        "type": "package",
-        "build": {
-          "build/MonoGame.Content.Builder.Task.props": {},
-          "build/MonoGame.Content.Builder.Task.targets": {}
-        }
-      },
       "MonoGame.Framework.DesktopGL/3.8.1.303": {
         "type": "package",
         "compile": {
@@ -130,6 +123,148 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "Myra/1.5.7": {
+        "type": "package",
+        "dependencies": {
+          "FontStashSharp.MonoGame": "1.3.9",
+          "XNAssets.MonoGame": "0.7.3",
+          "info.lundin.math.dll": "1.2.6"
+        },
+        "compile": {
+          "lib/netstandard2.0/Myra.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Myra.dll": {}
+        }
+      },
+      "StbImageSharp/2.30.15": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        }
+      },
+      "StbTrueTypeSharp/1.26.12": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbTrueTypeSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbTrueTypeSharp.dll": {}
+        }
+      },
+      "XNAssets.MonoGame/0.7.3": {
+        "type": "package",
+        "dependencies": {
+          "AssetManagementBase": "0.6.7",
+          "Cyotek.Drawing.BitmapFont": "2.0.4",
+          "DdsKtxXna.MonoGame": "0.4.4",
+          "StbImageSharp": "2.27.14"
+        },
+        "compile": {
+          "lib/netstandard2.0/XNAssets.MonoGame.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/XNAssets.MonoGame.dll": {}
+        }
+      }
+    },
+    "net8.0/osx-arm64": {
+      "AssetManagementBase/0.6.7": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AssetManagementBase.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AssetManagementBase.dll": {}
+        }
+      },
+      "Cyotek.Drawing.BitmapFont/2.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Cyotek.Drawing.BitmapFont.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Cyotek.Drawing.BitmapFont.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DdsKtxXna.MonoGame/0.4.4": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/DdsKtxXna.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/DdsKtxXna.dll": {}
+        }
+      },
+      "FontStashSharp.Base/1.1.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FontStashSharp.Base.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FontStashSharp.Base.dll": {}
+        }
+      },
+      "FontStashSharp.MonoGame/1.3.9": {
+        "type": "package",
+        "dependencies": {
+          "Cyotek.Drawing.BitmapFont": "2.0.4",
+          "FontStashSharp.Base": "1.1.9",
+          "FontStashSharp.Rasterizers.StbTrueTypeSharp": "1.1.9",
+          "StbImageSharp": "2.30.15"
+        },
+        "compile": {
+          "lib/netstandard2.0/FontStashSharp.MonoGame.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FontStashSharp.MonoGame.dll": {}
+        }
+      },
+      "FontStashSharp.Rasterizers.StbTrueTypeSharp/1.1.9": {
+        "type": "package",
+        "dependencies": {
+          "FontStashSharp.Base": "1.1.9",
+          "StbTrueTypeSharp": "1.26.12"
+        },
+        "compile": {
+          "lib/netstandard2.0/FontStashSharp.Rasterizers.StbTrueTypeSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FontStashSharp.Rasterizers.StbTrueTypeSharp.dll": {}
+        }
+      },
+      "info.lundin.math.dll/1.2.6": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/info.lundin.math.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/info.lundin.math.dll": {}
+        }
+      },
+      "MonoGame.Framework.DesktopGL/3.8.1.303": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/MonoGame.Framework.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/MonoGame.Framework.dll": {}
+        },
+        "native": {
+          "runtimes/osx/native/libSDL2.dylib": {},
+          "runtimes/osx/native/libopenal.1.dylib": {}
+        },
+        "build": {
+          "build/MonoGame.Framework.DesktopGL.targets": {}
         }
       },
       "Myra/1.5.7": {
@@ -295,20 +430,6 @@
         "lib/netstandard2.0/info.lundin.math.dll"
       ]
     },
-    "MonoGame.Content.Builder.Task/3.8.1.303": {
-      "sha512": "9Ilzzje62LhWElbPNEl7vh7XsRSbze+lvCJdZtTZUGu48FRgvYN6THURwIB9PN98EI33/Wnf6iuShNUtD7hL4Q==",
-      "type": "package",
-      "path": "monogame.content.builder.task/3.8.1.303",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "build/MonoGame.Content.Builder.Task.props",
-        "build/MonoGame.Content.Builder.Task.targets",
-        "monogame.content.builder.task.3.8.1.303.nupkg.sha512",
-        "monogame.content.builder.task.nuspec"
-      ]
-    },
     "MonoGame.Framework.DesktopGL/3.8.1.303": {
       "sha512": "eGYhqn0n1olk8MNYeE9EuBmoNNECN1T18rPMaQpkzsEQ0H3nVyFPXC+uCo78v5pi5juQpJ3PSFnSkjzZJ1U58A==",
       "type": "package",
@@ -383,38 +504,35 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
-      "MonoGame.Content.Builder.Task >= 3.8.1.303",
+    "net8.0": [
       "MonoGame.Framework.DesktopGL >= 3.8.1.303",
       "Myra >= 1.5.7"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Leon\\.nuget\\packages\\": {}
+    "/Users/sampartington/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Leon\\Downloads\\PortableGit\\Gravity-Space-Invaders\\Pleasework\\Pleasework\\Pleasework.csproj",
+      "projectUniqueName": "/Users/sampartington/Documents/Gravity-Space-Invaders/Pleasework/Pleasework/Pleasework.csproj",
       "projectName": "Pleasework",
-      "projectPath": "C:\\Users\\Leon\\Downloads\\PortableGit\\Gravity-Space-Invaders\\Pleasework\\Pleasework\\Pleasework.csproj",
-      "packagesPath": "C:\\Users\\Leon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Leon\\Downloads\\PortableGit\\Gravity-Space-Invaders\\Pleasework\\Pleasework\\obj\\",
+      "projectPath": "/Users/sampartington/Documents/Gravity-Space-Invaders/Pleasework/Pleasework/Pleasework.csproj",
+      "packagesPath": "/Users/sampartington/.nuget/packages/",
+      "outputPath": "/Users/sampartington/Documents/Gravity-Space-Invaders/Pleasework/Pleasework/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Leon\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/sampartington/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "projectReferences": {}
         }
       },
@@ -422,21 +540,12 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net8.0": {
+        "targetAlias": "net8.0",
         "dependencies": {
-          "MonoGame.Content.Builder.Task": {
-            "target": "Package",
-            "version": "[3.8.1.303, )"
-          },
           "MonoGame.Framework.DesktopGL": {
             "target": "Package",
             "version": "[3.8.1.303, )"
@@ -462,7 +571,12 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet@8/8.0.120/libexec/sdk/8.0.120/PortableRuntimeIdentifierGraph.json"
+      }
+    },
+    "runtimes": {
+      "osx-arm64": {
+        "#import": []
       }
     }
   }
